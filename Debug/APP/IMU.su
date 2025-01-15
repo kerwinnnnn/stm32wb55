@@ -1,0 +1,7 @@
+../APP/IMU.c:60:14:IMU_get_ctx	32	static
+../APP/IMU.c:70:6:IMU_init	56	static
+../APP/IMU.c:95:6:lsm6dsv16b_fifo	96	static
+../APP/IMU.c:284:16:platform_write	24	static
+../APP/IMU.c:305:16:platform_read	24	static
+../APP/IMU.c:326:6:tx_com	16	static
+../APP/IMU.c:338:13:platform_delay	16	static

@@ -1,0 +1,5 @@
+../STM32_WPAN/App/hrs_app.c:81:6:HRS_Notification	16	static
+../STM32_WPAN/App/hrs_app.c:134:6:HRSAPP_Init	16	static
+../STM32_WPAN/App/hrs_app.c:169:13:HRSAPP_Measurement	4	static
+../STM32_WPAN/App/hrs_app.c:177:13:HrMeas	8	static
+../STM32_WPAN/App/hrs_app.c:192:17:HRSAPP_Read_RTC_SSR_SS	4	static
