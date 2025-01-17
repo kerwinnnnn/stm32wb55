@@ -2,10 +2,15 @@
 #include"IMU.h"
 #include"string.h"
 #include"stdio.h"
+#include"app_entry.h"
+
+
 void lsm6dsv16b_pedometer(void)
 {
 		uint32_t  step_count=0;
 		stmdev_ctx_t dev_ctx;
+		uint16_t period_val=155;//单位：lsb
+		uint8_t pedo_step_conf=20;
 		IMU_init();
 		dev_ctx=IMU_get_ctx();
 	    lsm6dsv16b_block_data_update_set(&dev_ctx, PROPERTY_ENABLE);
@@ -17,8 +22,9 @@ void lsm6dsv16b_pedometer(void)
 	        .step_counter_enable = 1
 	    };
 	    lsm6dsv16b_stpcnt_mode_set(&dev_ctx, pedometer_mode);
-
 	    lsm6dsv16b_stpcnt_rst_step_set(&dev_ctx, 1);
+	    lsm6dsv16b_stpcnt_period_set(&dev_ctx,period_val );
+	    lsm6dsv16b_stpcnt_debounce_set(&dev_ctx, pedo_step_conf);
 
 
 	    while (1) {
@@ -28,9 +34,8 @@ void lsm6dsv16b_pedometer(void)
 	    	   printf("get steps error");
 	       }
 	        uint8_t tx_buffer[100];
-	        snprintf((char *)tx_buffer, sizeof(tx_buffer), "Steps: %u\r\n", step_count);
+	        snprintf((char *)tx_buffer, sizeof(tx_buffer), "Steps: %lu\r\n", step_count);
 	        tx_com(tx_buffer, strlen((char const *)tx_buffer));
-
 
 	        dev_ctx.mdelay(1000);
 	    }

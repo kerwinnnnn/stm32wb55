@@ -5,16 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../APP/Bluetooth_Data_Send.c \
 ../APP/IMU.c \
 ../APP/Pedometer.c \
 ../APP/lsm6dsv16b_reg.c 
 
 OBJS += \
+./APP/Bluetooth_Data_Send.o \
 ./APP/IMU.o \
 ./APP/Pedometer.o \
 ./APP/lsm6dsv16b_reg.o 
 
 C_DEPS += \
+./APP/Bluetooth_Data_Send.d \
 ./APP/IMU.d \
 ./APP/Pedometer.d \
 ./APP/lsm6dsv16b_reg.d 
@@ -27,7 +30,7 @@ APP/%.o APP/%.su APP/%.cyclo: ../APP/%.c APP/subdir.mk
 clean: clean-APP
 
 clean-APP:
-	-$(RM) ./APP/IMU.cyclo ./APP/IMU.d ./APP/IMU.o ./APP/IMU.su ./APP/Pedometer.cyclo ./APP/Pedometer.d ./APP/Pedometer.o ./APP/Pedometer.su ./APP/lsm6dsv16b_reg.cyclo ./APP/lsm6dsv16b_reg.d ./APP/lsm6dsv16b_reg.o ./APP/lsm6dsv16b_reg.su
+	-$(RM) ./APP/Bluetooth_Data_Send.cyclo ./APP/Bluetooth_Data_Send.d ./APP/Bluetooth_Data_Send.o ./APP/Bluetooth_Data_Send.su ./APP/IMU.cyclo ./APP/IMU.d ./APP/IMU.o ./APP/IMU.su ./APP/Pedometer.cyclo ./APP/Pedometer.d ./APP/Pedometer.o ./APP/Pedometer.su ./APP/lsm6dsv16b_reg.cyclo ./APP/lsm6dsv16b_reg.d ./APP/lsm6dsv16b_reg.o ./APP/lsm6dsv16b_reg.su
 
 .PHONY: clean-APP
 

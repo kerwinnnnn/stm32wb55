@@ -1,0 +1,5 @@
+../STM32_WPAN/App/custom_app.c:92:6:Custom_STM_App_Notification	16	static
+../STM32_WPAN/App/custom_app.c:134:6:Custom_APP_Notification	16	static
+../STM32_WPAN/App/custom_app.c:171:6:Custom_APP_Init	4	static
+../STM32_WPAN/App/custom_app.c:190:13:Custom_Data_send_Update_Char	16	static
+../STM32_WPAN/App/custom_app.c:209:6:Custom_Data_send_Send_Notification	16	static

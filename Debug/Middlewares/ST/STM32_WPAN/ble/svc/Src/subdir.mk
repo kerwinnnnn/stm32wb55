@@ -5,18 +5,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.c \
-../Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.c \
 ../Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c 
 
 OBJS += \
-./Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.o \
-./Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.o \
 ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.o 
 
 C_DEPS += \
-./Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.d \
-./Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.d \
 ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.d 
 
 
@@ -27,7 +21,7 @@ Middlewares/ST/STM32_WPAN/ble/svc/Src/%.o Middlewares/ST/STM32_WPAN/ble/svc/Src/
 clean: clean-Middlewares-2f-ST-2f-STM32_WPAN-2f-ble-2f-svc-2f-Src
 
 clean-Middlewares-2f-ST-2f-STM32_WPAN-2f-ble-2f-svc-2f-Src:
-	-$(RM) ./Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.cyclo ./Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.d ./Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.o ./Middlewares/ST/STM32_WPAN/ble/svc/Src/dis.su ./Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.cyclo ./Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.d ./Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.o ./Middlewares/ST/STM32_WPAN/ble/svc/Src/hrs.su ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.cyclo ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.d ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.o ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.su
+	-$(RM) ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.cyclo ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.d ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.o ./Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.su
 
 .PHONY: clean-Middlewares-2f-ST-2f-STM32_WPAN-2f-ble-2f-svc-2f-Src
 

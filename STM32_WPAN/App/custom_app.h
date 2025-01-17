@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    App/hrs_app.h
+  * @file    App/custom_app.h
   * @author  MCD Application Team
-  * @brief   Header for hrs_application.c module
+  * @brief   Header for custom_app.c module
   ******************************************************************************
   * @attention
   *
@@ -19,8 +19,8 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef HRS_APP_H
-#define HRS_APP_H
+#ifndef CUSTOM_APP_H
+#define CUSTOM_APP_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,6 +34,17 @@ extern "C" {
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
+typedef enum
+{
+  CUSTOM_CONN_HANDLE_EVT,
+  CUSTOM_DISCON_HANDLE_EVT,
+} Custom_App_Opcode_Notification_evt_t;
+
+typedef struct
+{
+  Custom_App_Opcode_Notification_evt_t     Custom_Evt_Opcode;
+  uint16_t                                 ConnectionHandle;
+} Custom_App_ConnHandle_Not_evt_t;
 /* USER CODE BEGIN ET */
 
 /* USER CODE END ET */
@@ -54,7 +65,8 @@ extern "C" {
 /* USER CODE END EM */
 
 /* Exported functions ---------------------------------------------*/
-void HRSAPP_Init( void );
+void Custom_APP_Init(void);
+void Custom_APP_Notification(Custom_App_ConnHandle_Not_evt_t *pNotification);
 /* USER CODE BEGIN EF */
 
 /* USER CODE END EF */
@@ -63,4 +75,4 @@ void HRSAPP_Init( void );
 }
 #endif
 
-#endif /*HRS_APP_H */
+#endif /* CUSTOM_APP_H */
